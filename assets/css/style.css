@@ -1,0 +1,134 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 1.5rem;
+    padding: 10px 0;
+}
+.container{
+    min-height: 70vh;
+}
+.multiplication{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+.multiplication-item{
+    border: 1px solid #ccc;
+    width: 90%;
+    max-width: 100px;
+    padding: 10px;
+    box-shadow: 2px 8px 12px #ccc;
+}
+.multiplication-item:hover{
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 500ms;
+}
+header{
+    box-shadow: 2px 8px 12px #ccc;
+    position: sticky;
+    top: 0;
+    background-color: teal;
+    color: white;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+header ul li{
+    line-height: 60px;
+}
+header ul li a{
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    height: 60px;
+}
+footer{
+    background-color: teal;
+    box-shadow: 2px 8px 12px #ccc;
+    color: white;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+
+}
+
+/************** FORM ****************/
+.container form{
+    margin: 10px auto;
+    padding: 5px;
+}
+.form-line{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-line select,
+.form-line input[type="email"],
+.form-line input[type="password"],
+.form-line input[type="text"]{
+    border: 1px solid #ccc;
+    
+    outline: none;
+}
+
+.form-line select#langue,
+.form-line select#civility,
+.form-line input[type="email"],
+.form-line input[type="password"],
+.form-line input[type="text"]{
+    height: 35px;
+}
+
+input[type="image"]{
+    width: 50px;
+    height: 50px;
+    border: 2px solid #1d1d1d;
+}
+form{
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+}
+form .error{
+    color: red;
+}
+.submit-button{
+    display: flex;
+}
+button.submit{
+    background-color: teal;
+    outline: none;
+    border: none;
+    color: white;
+    height: 35px;
+    flex: 1;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 1.1rem;
+    }
+}
