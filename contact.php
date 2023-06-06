@@ -32,8 +32,15 @@ require_once("lib/contactForm.php");
             <div class="error"> <?php echo isset($errors["full_name"]) ? $errors["full_name"] : "" ?></div>
         </div>
         <div class="form-line">
+            <label for="age">Age</label>
+            <input id="age" name="age" type="date"
+            value="<?php echo isset($_REQUEST["age"]) ? $_REQUEST["age"] :"" ;?>"
+            >
+            <div class="error"> <?php echo isset($errors["age"]) ? $errors["age"] : "" ?></div>
+        </div>
+        <div class="form-line">
             <label for="email">Email</label>
-            <input id="email" name="email" type="email"
+            <input id="email" name="email" type="text"
             value="<?php echo isset($_REQUEST["email"]) ? $_REQUEST["email"] :"" ;?>"
             >
             <div class="error"> <?php echo isset($errors["email"]) ? $errors["email"] : "" ?></div>

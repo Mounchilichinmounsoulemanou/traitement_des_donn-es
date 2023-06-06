@@ -33,6 +33,22 @@ function checkData ($tab){
             $result[$key] = "Le champs ".$key." n'est pas renseigné !";
         }
         // SPECIFIQUE
+        if($key == "email" && !isset($result[$key])){
+            $model = '/^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,8}$/';
+            if(preg_match($model, $value) === 0){
+                $result[$key] = "Votre ".$key." ne vérifie pas le format d'email correct !";
+
+            }
+            
+        }
+        if($key == "age" && !isset($result[$key])){
+            $model = '/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/';
+            if(preg_match($model, $value) === 0){
+                $result[$key] = "Votre ".$key." ne vérifie pas le format d'âge correct !";
+
+            }
+            
+        }
         if($key == "message" && !isset($result[$key])){
             if(strlen($value) < 20){
                 $result[$key] = "Le champs ".$key." doit faire au moins 20 caractères !";
